@@ -130,11 +130,25 @@ Module 2: Fundamentals Of Linux
 			AWS Cloud Platform :
 			
 		- Launch an EC2 Instance 
-			- AMI Ubuntu v22.04	(Previous)
+			- AMI Ubuntu v22.04	(Previous Version)
+			- t2.mirco
+			- existing key-pair
 					
 		- Connect to EC2 Instance 
+			- EC2 Instance Connect through AWS Console web-browser
+			
+			- Terminals : Command prompt/gitbash/Terminal
+			
 			- Using SSH Agent:
-				- MobaXterm/Putty
+				- MobaXterm -> https://mobaxterm.mobatek.net/download-home-edition.html
+								- Click on Installer Edition 
+									- Downloads a *.zipfile 
+										- Extract and run that exec file 
+										
+										
+				- Host_Name 		-> <Public_IP Address>
+				- User_Name 		-> ubuntu 
+				- Private Key file 	-> *.pem
 				
 		- Login to Ubuntu Machine 		
 	
@@ -142,3 +156,33 @@ Module 2: Fundamentals Of Linux
 		
 	github account ?  https://github.com/ 
 		
+	
+		Package Management :
+		
+			Flavors of Linux : 						Package Manager : 	Used to Manage the Packages
+																		Install/Un-install/Update the Packages 
+		
+			- Centos / RHEL 				--		yum
+			
+			- Debian / Ubuntu***			--		apt-get / apt
+			
+			- Fedora 						--		dnf
+			
+			- Amazon Linux					--		dnf(latest Amazon Linux) / yum(previous version)
+				- Based on Fedoro Distribution		
+			
+			- Package Managers are executed as a root user.
+				Once we login to Linux Machine 
+				Elevate the Access to root user level.
+					sudo -i 		# To Elevate the access to root user.
+					
+	
+	- Working Linux CLI Commands
+	
+		clear 			# Clear the Screen
+		
+		hostname		# To get the Host Name 
+		
+		sudo -i 		# To Elevate the access to root user.
+		
+		apt update 		# To update the default system and security packages 
