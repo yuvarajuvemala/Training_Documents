@@ -1,0 +1,144 @@
+BATCH : SA2410011
+
+Module 2 : 3rd Dec. 2024
+
+Tue-Friday 	- LIVE Sessions - 8PM to 10:30PM  IST
+Mondays 	- Mentoring Session
+
+https://github.com/SA-Team-DevOps-03-Dec-24/Training_Documents
+
+######################
+Day 1 : 3rd Dec. 2024
+######################
+
+Module 2: Fundamentals Of Linux 
+
+1. Overview of Linux
+2. Linux Architecture
+3. Linux Distributions
+4. Basic Linux Commands
+5. File Permission Management
+6. User Creation
+7. Shell Scripts
+8. SSH and VI Utility
+
+
+	Linux :
+	
+		What is Linux ?
+		
+		- OS is an interface between User Applications and Underlying Hardware
+		
+		- Linux is an Open Source Operating System 
+		- Linux OS was created based on Unix 
+		
+		- Linux Distributions :
+		
+			- Centos / RHEL 
+			
+			- Debian / Ubuntu
+			
+			- Fedora 
+			
+			- Amazon Linux
+				- Based on Fedoro Distribution
+				
+		- Core of Linux OS is called as Kernel
+			- Creates a dedicated Address Space to run any application/task/process
+				- Storage 
+				- Network 
+				- IPC - Inter-Process Communication 
+				- Security 
+				- User Management
+				- Namespaces 
+				- Control Groups 
+				- Process 
+					- Will be assigned with unique process Id.
+				
+		- Linux Distributions :
+		
+			Flavors of Linux : 						Package Manager : 	Used to Manage the Packages
+																		Install/Un-install/Update the Packages 
+		
+			- Centos / RHEL 				--		yum
+			
+			- Debian / Ubuntu***			--		apt-get / apt
+			
+			- Fedora 						--		dnf
+			
+			- Amazon Linux					--		dnf(latest Amazon Linux) / yum(previous version)
+				- Based on Fedoro Distribution		
+			
+			- Package Managers are executed as a root user.
+				Once we login to Linux Machine 
+				Elevate the Access to root user level.
+					sudo -i 		# To Elevate the access to root user.
+		
+		- Computing Device :
+		
+			- Desktop Machines 
+			- Laptop 
+			- Mobile Devices
+			
+	Learn Linux on DevOps Perspective :
+	
+		- DevOps Team Roles & Responsibilities :
+		
+			- Install all the DevOps Tools/Packages and Services on Linux Machines.
+			- Package Management :
+				- Periodic Upgrade of packages 
+					Eg.: jdk11 --> jdk17 - Upgrade - update and clean-up the previous version
+										 - Update  - Just Update to New Version 
+				- Un-install the Packages
+				- Back-up and Restore 
+			
+			- Remote Server Management - i.e., Client Server Architecture
+			
+				Server (VM)				
+					- Client1,2,3,4,5 (VM)
+					
+			- Manage Linux Machines :
+			
+				- Package Management 
+				- File Management 
+				- User Management 
+				- Access Management
+				- Remote Server Management 
+					SSH (Secure SHell) Protocol -	
+						SSH Connection using Port 22.
+						
+							- Host Name 						
+							- User Name 							
+							- Credential
+								Types of Authentication :								
+									- Password based Authentication
+									- Token based Authentication
+									- Key based Authentication
+										- Private key 
+										- Authorized_keys / Public Key 
+									- Passwordless Authentication
+
+				- Process Automation
+					- Linux Shell Scripting 
+										
+
+
+
+	1. Package Management :
+	
+		- Linux Module :
+			AWS Cloud Platform :
+			
+		- Launch an EC2 Instance 
+			- AMI Ubuntu v22.04	(Previous)
+					
+		- Connect to EC2 Instance 
+			- Using SSH Agent:
+				- MobaXterm/Putty
+				
+		- Login to Ubuntu Machine 		
+	
+		- Working Linux CLI Commands
+		
+	github account ?  https://github.com/ 
+		
