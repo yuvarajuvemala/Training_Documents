@@ -186,3 +186,429 @@ Module 2: Fundamentals Of Linux
 		sudo -i 		# To Elevate the access to root user.
 		
 		apt update 		# To update the default system and security packages 
+
+		
+######################
+Day 2 : 4th Dec. 2024
+######################
+
+	- Package Management 
+	
+		git - Open Source Version Control System 
+
+		sudo -i 
+		
+		apt install git -y
+		
+		git --version
+		
+		
+		Install a package : maven 		# Maven is a Build Tool
+		
+													Tomcat 		Nginx		GIT 	Maven 
+												
+			- Install the Pre-requisites 		 	jdk								JDK 
+			
+			- Install the Actual Package 			Tomcat		Nginx		GIT		Maven  
+			
+			- Post-Installation Activities 			Start		Start 
+			
+			
+		Package :
+
+			Can be executed as a Service 
+			Can be Executed as a Tool
+			
+			Service : 	Start/Stop/Restart/Enable/Disable/Status
+			
+		Web Applications :	
+		
+		Tomcat/Nginx/Jenkins			# Executed as a Service 
+		
+		Maven							# Executed as a Tool 
+		
+		MY_SQL DataBase 
+		
+		apt install nginx -y
+
+		nginx -version 
+		
+			systemctl 			# Is a command line utility to manage the services running on Linux Machine
+		
+			systemctl status nginx
+			systemctl stop nginx
+			systemctl start nginx
+			systemctl enable nginx			# Make Nginx as a Startup Task 
+			systemctl disable nginx			# Remove from startup task list
+			
+		
+		Un-Installation of any Package :
+		
+			apt remove nginx -y
+		
+		Update the Package :
+		
+			apt update/upgrade nginx_3.9 -y
+			
+		which nginx 						# To get the installation path.
+		
+		which git 
+		
+		Manual Installation ::
+		
+			Download the Package :
+			
+				wget <url>					# used to download the package 
+			
+				Extract using tar command in the specific directory.
+			
+			
+	- File Management :::
+	
+		-> Directory/Folder
+		
+		-> Files 
+		
+
+	
+	- pwd 					# Present Working Directory 
+	
+	- ls 					# To list the files and folders from the current directory
+
+	- ls -a					# To list all the files and folders from the current directory including hidden files and folders
+		
+	- cd 					# Change Directory 
+	
+	- cd /					# Take the control to root directory
+	
+	- cd ~ 					# Take the control to home directory
+	
+	- mkdir dir1			# To Create Directory 
+	
+	- cd ..					# Move back to previous directory
+	
+	- cd /etc 
+	
+	Create Files in Directory :
+	
+	echo "Hello"			# echo Command is to used print any message to the terminal.
+	
+	
+	touch <file_name>		# Create Empty file 
+	
+	echo "Hello" >> file_name 	# Create a file with content
+
+	cat file_name			# Read the contents of the a file
+
+	
+	vi file_name			# Create/Open a file using vi editor
+	
+	Eg.: 
+
+		vi test1 
+		
+			press i						# Goto Insert Mode 
+			
+			Type the File Contents 
+
+			press esc :wq				# Save and Exit from that file 
+			
+			press esc :q!				# Exit without saving the file
+			
+	
+	echo "Hello" >> file1.txt			# Create a file with content
+										# Add More Records to a file 
+								
+	echo "Dummy Record" > file1.txt		# Replace the file content 	
+	
+	cat file_name
+	
+	cp file_name <Target_Dir_Name>		# Copy file to another directory 
+	
+		eg.: 
+		
+			cp file1.txt /home/ubuntu/dir3
+	
+	mv file_name <Target_Dir_Name>		# Move file to another directory 
+	
+		eg.: 
+		
+			mv file1.txt /home/ubuntu/dir3
+			
+			mv file1.txt /home/devopsadmin/dir3
+			
+	Rename the File :					
+		
+		mv existing_file_name <new_file_name>
+	
+	
+	rm <file_name>						# Remove a file 	
+	
+	rm -rf dir3							# Remove a directory	
+	
+	touch .file_name 					# Create Hidden File 
+	
+	mkdir .dir1							# Hidden Directory
+	
+	ll									# Long Listing 
+	
+    1  exit
+    2  apt update
+    3  apt update -y
+    4  clear
+    5  apt install git
+    6  git --version
+    7  apt install nginx
+    8  nginx --version
+    9  clear
+   10  nginx -version
+   11  systemctl status nginx
+   12  systemctl stop nginx
+   13  systemctl status nginx
+   14  systemctl start nginx
+   15  systemctl status nginx
+   16  systemctl enable nginx
+   17  systemctl stop nginx
+   18  systemctl status nginx
+   19  which git
+   20  which nginx
+   21  which jdk
+   22  clear
+   23  apt update
+   24  clear
+   25  exit
+   26  pwd
+   27  cd /
+   28  pwd
+   29  clear
+   30  pwd
+   31  cd ~
+   32  pwd
+   33  exit
+   34  cd /
+   35  pwd
+   36  ls
+   37  cd home/
+   38  ls
+   39  cd ..
+   40  ls
+   41  cd etc
+   42  pwd
+   43  ls
+   44  cd /
+   45  clear
+   46  cd /etc
+   47  ls
+   48  exit
+   49  pwd
+   50  exit
+   51  history
+
+    1  hostname -i
+    2  clear
+    3  apt update -y
+    4  sudo -i
+    5  sudo -i
+    6  clear
+    7  sudo -i
+    8  pwd
+    9  ls
+   10  cd /
+   11  pwd
+   12  cd home
+   13  pwd
+   14  ls
+   15  cd ubuntu/
+   16  pwd
+   17  cd /
+   18  c home/
+   19  cd home/
+   20  cd ~
+   21  pwd
+   22  sudo -i
+   23  clear
+   24  pwd
+   25  ls
+   26  mkdir dir1
+   27  ls
+   28  pwd
+   29  mkdir dir2
+   30* l
+   31  mkdir dir3
+   32  ls
+   33  cd dir1/
+   34  pwd
+   35  ls
+   36  mkdir sub-dir1.1
+   37  ls
+   38  cd sub-dir1.1/
+   39  pwd
+   40  cd ..
+   41  pwd
+   42  cd ..
+   43  pwd
+   44  cd /
+   45  clear
+   46  pwd
+   47  sudo -i
+   48  pwd
+   49  cd ~
+   50  pwd
+   51  ls
+   52  cd etc
+   53  cd /etc
+   54  cd /
+   55  pwd
+   56  cd etc
+   57  clear
+   58  pwd
+   59  cd /
+   60  ls
+   61  cd ~
+   62  cd dir1
+   63  cd sub-dir1.1/
+   64  pwd
+   65  cd -
+   66  cd sub-dir1.1/
+   67  clear
+   68  cd -
+   69  clear
+   70  cd sub-dir1.1/
+   71  cd ..//
+   72  clear
+   73  cd sub-dir1.1/
+   74  pwd
+   75  cd /
+   76  cd ~
+   77  sudo -i
+   78  pwd
+   79  echo "Hello"
+   80  pwd
+   81  ls
+   82  cd dir1
+   83  ls
+   84  clear
+   85  pwd
+   86  ls
+   87  cd ..
+   88  ls
+   89  cd dir2
+   90  ls
+   91  clear
+   92  ls
+   93  touch file1.txt
+   94  ls
+   95  cat file1.txt
+   96  echo "hello" >> test1
+   97  ls
+   98  cat test1
+   99  echo "hello1" >> test1
+  100  cat test1
+  101  echo "hello2" >> test1
+  102  cat test1
+  103  echo "hello3" >> test1
+  104  cat test1
+  105  clear
+  106  l
+  107  vi test1
+  108  cat test1
+  109  vi test1
+  110  cat test1
+  111  vi test1
+  112  cat test1
+  113  clear
+  114  ls
+  115  cat file1.txt
+  116  echo "rec1" >> file1.txt
+  117  cat file1.txt
+  118  echo "rec2" >> file1.txt
+  119  echo "rec3" >> file1.txt
+  120  echo "rec4" >> file1.txt
+  121  cat file1.txt
+  122  echo "New Record1" > file1.txt
+  123  cat file1.txt
+  124  echo "Dummy Record1" > file1.txt
+  125  cat file1.txt
+  126  echo "Dummy Record2" >> file1.txt
+  127  cat file1.txt
+  128  cat test1
+  129  cat test1 > test2
+  130  ls
+  131  cat test2
+  132  cat test1
+  133  clear
+  134  ls
+  135  pwd
+  136  cd ..
+  137  cd dir3/
+  138  ls
+  139  cd -
+  140  cd dir1
+  141  cd ..
+  142  cd dir2
+  143  ls
+  144  cp test1 /home/ubuntu/dir3/
+  145  ls
+  146  cd ..
+  147  cd dir3/
+  148  ls
+  149  cd -
+  150  cd dir2/
+  151  ls
+  152  mv test2 /home/ubuntu/dir3/
+  153  ls
+  154  cd dir3
+  155  cd ls
+  156  cd //
+  157  cd clear
+  158  cd ~
+  159  clear
+  160  cd dir3/
+  161  ls
+  162  mv test2 dummyfile2
+  163  ls
+  164  cd ..
+  165  ls
+  166  cd dir3/
+  167  ls
+  168  rm test1
+  169  ls
+  170  cd ..
+  171  rm -rf dir3
+  172  ls
+  173  cd dir2/
+  174  ls
+  175  rm -r test1
+  176  ls
+  177  clear
+  178  ls -a
+  179  ls
+  180  touch .testfile1
+  181  ls
+  182  ls -a
+  183  mkdir .temp-dir
+  184  ls
+  185  ls -a
+  186  clear
+  187  ls
+  188  mkdir temp-dir1
+  189  mkdir temp
+  190  touch t
+  191  touch t2
+  192  touch t2333
+  193  ls
+  194  ll
+  195  clear
+  196  ls
+  197  ll
+  198  sudo -i
+  199  history
+
+Next :::
+	
+	Access Management 
+	
+	User Management 
+
+		drwxrwxrwx
+
