@@ -612,3 +612,367 @@ Next :::
 
 		drwxrwxrwx
 
+######################
+Day 3 : 5th Dec. 2024
+######################
+
+	- Access Management 
+	
+	- User Management 
+	
+	- Remote Server Handling!
+	
+	
+	- Access Management :::
+	
+		File ->
+		
+		Access Mode :
+		
+		ll -> Long Listing 
+		
+		
+		
+		-rw-rw-r-- 1 ubuntu ubuntu    0 Dec  4 16:45 t2333
+		
+		drwxrwxrwx 2 ubuntu ubuntu 4096 Dec  4 16:45 temp/
+		
+		drwxr-x--x 2 ubuntu ubuntu 4096 Dec  4 16:45 temp/
+		
+		drwxr-x--- 2 ubuntu ubuntu 4096 Dec  4 16:45 temp/
+		
+		drwx------ 2 ubuntu ubuntu 4096 Dec  4 16:45 temp/
+		
+		
+		----------
+		
+		file1.sh 	Created by ubuntu user 		| Group Users			| 	Public User
+		
+		Read 										Read 						Read 
+																				
+		Write                                       Write                       Write 
+																				
+		Execute                                     Execute                     Execute
+		
+		
+		
+		
+		
+		Owner 
+		
+		User Group 	-- Purpose ?
+		
+		Public User
+		
+		
+		developer1		DEV_GRP
+		developer2		DEV_GRP
+		
+		admin1			ADMIN_GRP
+		admin2			ADMIN_GRP
+		
+		tester1			TESTING_GRP
+		
+		>> ll 						# Long Listing 
+				
+		
+		drwxrwxr-x  2 ubuntu ubuntu 4096 Aug 16 14:49 dir4/
+		-rw-rw-r--  1 ubuntu ubuntu    0 Aug 16 14:54 file1.txt
+		
+		
+		----------
+		
+		-									# Denote dir or file (Possible value:  d or - )
+												'd'  Denotes Directory
+												'-'  Denotes File 
+												
+												
+		 ---								# Denote the Owner Level Access 
+												Possible Values: r / w /x 
+												r - Read only Access 
+												w - Write Access 
+												x - Execute Access 
+		
+			---								# Denote the Group Level Access
+												Possible Values: r / w /x 
+												r - Read only Access 
+												w - Write Access 
+												x - Execute Access
+
+			   ---							# Denote the Public User Level Access
+												Possible Values: r / w /x 
+												r - Read only Access 
+												w - Write Access 
+												x - Execute Access
+												
+	
+		chmod :::
+		
+		chmod <Access_Level> <File/Directory_Name>
+		
+		
+		chmod 400 file1.txt
+		
+		chmod 755 temp1.sh
+		
+		Access Level :
+		
+			Read 
+			Write 
+			Execute  
+		
+		
+		
+	- User Management ::::
+		
+		Create New Linux User 
+		
+		Delete the Linux User 
+		
+		Set the Access Levels to the user :
+		
+			- User Authentication 	: Who can access ?
+			
+			- User Authorization	: What can be accessible ?
+
+
+		Create Linux User with SSH Keys :::
+		
+			#Run the useradd command as a root user :
+			
+			useradd devopsadmin -s /bin/bash -m -d /home/devopsadmin		# Ubuntu 
+			
+			useradd devopsadmin												# Non - Ubuntu Machines
+
+
+			useradd user1
+			
+			su - user1
+
+
+			Get the List of Linux Users ::::
+				cat /etc/passwd
+			
+			Get the list of Linux User Groups :::: 
+				cat /etc/group
+			
+			
+			password ::
+			
+				passwd devopsadmin					# Create/reset Password to user
+				
+					root@ip-172-31-4-58:~# passwd devopsadmin
+					New password:
+					Retype new password:
+					passwd: password updated successfully	
+
+				passwd -d devopsadmin				# Remove the Password protection. # Run this command as a root user 
+				
+				
+			sshkey :::
+			
+				ssh keys :
+				
+					key pair : Public key and Private Key 
+			
+				useradd devopsadmin -s /bin/bash -m -d /home/devopsadmin
+
+				su - devopsadmin
+
+				ssh-keygen -t ecdsa -b 521										#ubuntu 22.04 or higher version of ubuntu				
+
+				cd .ssh
+				
+				ls ~/.ssh 
+
+				#You should see following two files:
+
+				#id_ecdsa - private key
+				#id_ecdsa.pub - public
+			
+			
+			cat id_ecdsa.pub > authorized_keys			# authorized_keys this file name should be same.
+			
+			authorized_keys :::
+				It is the copy of Public Key.
+				
+				Always the private key will be compared with the authorized_keys			
+				
+			chmod 600 /home/devopsadmin/.ssh/*					# Used to Change the Access Mode of Files or Directories
+			
+			
+			In Ubuntu Machine :
+			
+			*.pem 				# Private key of ubuntu user 
+			
+			
+			During Login process, *.pem will be compared with authorized_keys of ubuntu user.
+			
+			# Run this command as a root user. 
+			
+			chown -R devopsadmin:devopsadmin /root/sampledir1/
+			
+			
+			Tomcat Web Application Server 		# installed  by root user
+			
+			
+			chown -R devopsadmin:devopsadmin /opt/tomcat/
+			
+			user1 --> created a project folder.
+			
+	
+	- Remote Server Handling ::::
+	
+	Remote Server Access :::
+	
+		AWS Cloud :
+		
+			VM1	(Server)
+			
+			VM2 (Client)
+					
+		1. Establish Connection to Remote Server  
+		2. Login to the Remote Server 
+		3. Copy the Files from one server to another server
+			using SCP
+		4. Manage the Remote Server - Install any package/Uninstall/Upgrade 			# Will be done using Ansible 
+		
+		
+		
+		
+		Pre-requisites for Remote Server :::
+		
+			- Launch 2 VMs (VM1-Source & VM2-Target)
+			
+			- Ensure that Port 22 is enabled 
+			
+			- Create User in both the VMs 
+			
+			- Create SSH-Key in one server(VM1)
+			
+			- Use the public_Key as a authorized_keys in the Client Machine(VM2)
+			
+			- Establish SSH Connection & Login to VM2(Client_Machine)
+			
+			- Copy Files from VM1 to VM2(Client_Machine)
+
+		Client_Machine(VM2) ::::
+			
+		useradd adminuser1 -s /bin/bash -m -d /home/adminuser1
+
+		su - adminuser1	
+
+		mkdir .ssh 
+
+		cd .ssh 
+
+		vi authorized_keys
+
+		#paste the id_ecdsa.pub of devopsadmin user from Server machine to authorized_keys file in Client Machine 
+
+		chmod 600 /home/adminuser1/.ssh/*
+			
+			
+			From Server execute this Command as a devopsadmin user :
+			
+			ssh adminuser1@172.31.10.63
+					
+					
+			- Copy Files from VM1 to VM2(Client_Machine)	
+
+
+				Server Machine ::::		
+					/home/devopsadmin/sourcefile.txt 
+					
+				Client Machine ::::
+					/home/adminuser1/sourcefile.txt
+			
+				#cp  /home/devopsadmin/sourcefile.txt home/devopsadmin/dir1/
+				
+				scp /home/devopsadmin/sourcefile.txt adminuser1@172.31.10.63:/home/adminuser1
+
+
+	IT Support Team :
+	
+		Team - 5 Members --> 
+		
+			   Desktop Machine 
+			   
+			   All the required software has to be installed 
+			   
+			   
+				- Host_Name 		-> <Public_IP Address>
+				- User_Name 		-> ubuntu 
+				- Private Key file 	-> *.pem
+				
+
+    1  pwd
+    2  exit
+    3  passwd devopsadmin
+    4  clear
+    5  exit
+    6  clear
+    7  pwd
+    8  ls
+    9  ls -a
+   10  ls
+   11  ls -a
+   12  ssh-keygen -t ecdsa -b 521
+   13  ls -a
+   14  cd .ssh/
+   15  ls
+   16  ll
+   17  clear
+   18  ls
+   19  cat id_ecdsa
+   20  cat id_ecdsa.pub
+   21  clear
+   22  ls
+   23  cat id_ecdsa.pub > authorized_keys
+   24  ls
+   25  ll
+   26  clear
+   27  ll
+   28  chmod 600 /home/devopsadmin/.ssh/*
+   29  ll
+   30  exit
+   31  cd /root/
+   32  exit
+   33  clear
+   34  ls -a
+   35  cd .ssh/
+   36  ls
+   37  ll
+   38  cat authorized_keys
+   39  clear
+   40  cat id_ecdsa.pub
+   41  ssh adminuser1@172.31.10.63
+   42  clear
+   43  cd ~
+   44  pwd
+   45  echo "rec1" >> sourcefile.txt
+   46  ls
+   47  scp /home/devopsadmin/sourcefile.txt adminuser1@172.31.10.63:/home/adminuser1
+   48  ssh adminuser1@172.31.10.63
+   49  history
+
+
+    1  ls -a
+    2  mkdir .ssh
+    3  cd .ssh/
+    4  ls
+    5  vi authorized_keys
+    6  ll
+    7  chmod 600 /home/adminuser1/.ssh/*
+    8  ll
+    9  cd ~
+   10  pwd
+   11  ls
+   12  history
+
+
+Next :
+
+	Process Automation :
+	
+		Shell Scripting!
