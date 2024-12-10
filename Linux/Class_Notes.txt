@@ -1385,3 +1385,511 @@ case $CHAR in
 		echo "You entered $CHAR which is not a vowel"
 		;;
 esac
+
+
+
+
+######################
+Day 5 : 10th Dec. 2024
+######################
+
+	- Shell Scripts 
+	
+	- Overview of DevOps 
+
+
+
+	Iterations :
+	
+		- for loop
+		
+			a[5]	==> {2,3,4,5,6}
+			
+			
+			
+			index starts with 0
+			
+			a[0] = 2 
+			a[1] = 3
+			a[2] = 4
+			a[3] = 5
+			a[4] = 6
+		
+			for(i=0;i<5;i++)
+				{
+					echo "print to a console: $a[i]"
+				}
+		
+			0 < 5 
+			
+			1 < 5 
+			
+			2 < 5 
+			 
+			.................
+		
+		
+		Data Structures and Algorithms :::
+		
+		Lists 
+		
+		Handle the data from various Data store :
+		
+			- File ==> json/yaml files 
+			
+		jquery ==> 
+		
+		
+		- while loop 
+		- do - while 
+
+
+
+
+
+
+
+
+A simple script to show usage of string compare operator -z and -n
+
+Source Code:
+
+#!/bin/bash
+
+STR1="Hello"
+STR2="Hello"
+
+if [ -z "${STR1}" ]
+then
+    echo "String1 is empty"
+else
+    echo "String1 is NOT empty"
+fi
+
+echo ":$STR:"
+if [ -n "${STR2}" ]
+then
+    echo "String2 is NOT empty"
+else
+    echo "String2 is empty"
+fi
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to show usage of logical operators
+
+Source Code:
+
+#!/bin/bash
+
+echo -n "Enter a NUM: "
+read NUM
+
+# Check whether a number is between 10 and 20 (Using AND -a operator)
+if [ $NUM -ge 10 -a $NUM -le 20 ]
+then
+    echo "$NUM is between 10 and 20"
+else
+    echo "$NUM is NOT between 10 and 20"
+fi
+
+echo -n "Enter another NUM: "
+read NUM
+
+# Check whether a number is between 10 and 20 (Using OR -o operator)
+if [ $NUM -lt 10 -o $NUM -gt 20 ]
+then
+    echo "$NUM is NOT between 10 and 20"
+else
+    echo "$NUM is between 10 and 20"
+fi
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to show usage while loop
+
+Source Code:
+
+#!/bin/bash
+#
+
+COUNT=0
+
+while [ $COUNT -lt 5 ]
+do
+    echo "Loop count is ${COUNT}"
+    COUNT=$((COUNT + 1))
+done
+
+echo "Done"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Sum of N natural numbers using while loop
+
+Source Code:
+
+#!/bin/bash
+#
+
+echo -n "Enter a number: "
+read NUM
+
+let SUM=0; 
+let I=1
+while [ $I -le $NUM ]
+do
+	SUM=`expr $SUM + $I`
+	I=$((${I} + 1))
+done
+
+echo "The sum of the first $NUM numbers is: $SUM"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to demonstarte for loop [ Bash syntax ]
+
+Source Code:
+
+#!/bin/bash
+#
+
+COUNT=0
+
+for i in 0 1 2 3 4
+do
+    echo "Loop count is ${COUNT}"
+    COUNT=$((COUNT + 1))
+done
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A simple script to demonstarte for loop [ C syntax ]
+
+Source Code:
+
+#!/bin/bash
+
+COUNT=0
+
+for ((i = 0; i < 5; i++))
+do
+    echo "Loop count is ${COUNT}"
+    COUNT=$((COUNT + 1))
+done
+
+< 	Less than operator 
+<=  Less than or equal
+
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show the usage of command line arguments, Here we access positional arguments using $1, $2 …
+
+Source Code:
+
+#!/bin/bash
+
+echo "Total no. of argument: $#"
+
+echo "Program name: $0"
+echo "1st argument: $1"
+echo "2nd argument: $2"
+echo "3rd argument: $3"
+
+
+
+program --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ A script to show the usage of command line arguments, Here we access arguments by iterating over $@
+
+Source Code:
+
+#!/bin/bash
+
+echo "Total no. of argument: $#"
+echo "Argument list: $@" # Commonly used
+echo "Argument list: $*"
+
+# Iterate over arguments ($@)
+for ARG in $@
+do
+    echo $ARG
+done
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show the usage of function
+
+Source Code:
+
+
+print_hello
+
+#!/bin/bash
+
+# Function definition
+function print_hello()
+{
+    	echo "====="
+    	echo "Hello"
+    	echo "====="
+}
+
+# Call the function - print_hello
+print_hello
+
+print_hello
+print_hello
+print_hello
+print_hello
+
+
+#print_hello
+
+
+
+
+
+E-Commerce Web App Login Process Language
+		Email Validation 
+		
+	User_Name	: asdfasdf@asdfs.com  		# asdfasd # 23423423 
+	
+	Password 	: 
+	
+	
+	Sign-up process : 
+	
+	create username and password 
+		- Email validation 
+		
+		
+	Functions / Methods :
+	
+		- Functions are set of instructions used repeatly within the application
+		
+		- Meant for Code reusalbility
+		
+		
+		
+	Cloud Formation Templates :
+	
+		*.yaml
+		
+	Python Scripts --> Create AWS Resources 
+	
+		Functions 
+		
+		sum()
+		{
+			x = 5
+			y = 10
+			z = x + y
+			echo z
+		}
+
+		sum(x,y)
+		{
+			z = x + y
+			echo z
+		}			
+
+		sum(5,2)
+
+
+install jdk :::
+
+
+apt install openjdk-17-jdk
+
+
+Goto /usr/lib/jvm/ 
+
+vi /etc/profile 
+
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64/bin"
+PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show the usage of function and how to pass arguments
+
+Source Code:
+
+#!/bin/bash
+
+# Function definition
+function find_sum()
+{
+    SUM=`expr $1 + $2`
+    echo $SUM
+}
+
+# Pass arguments 10 and 20 to find_sum function
+find_sum 10 20 # 30
+
+# Save the output of function in a variable
+RESULT=`find_sum 100 200`
+echo $RESULT	# 300
+
+
+num1=5
+num2=5
+
+
+sample1.sh
+
+#!/bin/bash
+num1=$1
+num2=$2
+
+num3=$num1 + $num2
+
+num3=$1 + $2 + $3 
+
+echo $num3 
+
+sh sample1.sh 34 45 43
+
+
+
+
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show the usage of function and how to pass arguments Inside function:
+$# – Gives no. of arguments
+$@ – Contains the arguments to function
+Accessing function arguments is similar to accessing command line arguments
+
+Source Code:
+
+#!/bin/bash
+
+# Function definition
+function find_sum()
+{
+    echo "Arg count: $#"
+    echo "Arg list: $@"
+    SUM=0
+    # Iterate over function arguments
+    for ARG in $@
+    do
+	SUM=`expr $ARG + $SUM`
+    done
+
+    echo $SUM
+}
+
+# Call find_sum with many arguments
+find_sum 1 2 3 4 5
+
+find_sum 10 20
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to show how to declare an array and access its elements
+
+Source Code:
+
+#!/bin/bash
+
+# Declare an array
+FRUITS=(apple mango banana orange)
+
+# Print value of each element
+echo "element 0: ${FRUITS[0]}"
+echo "element 1: ${FRUITS[1]}"
+echo "element 2: ${FRUITS[2]}"
+echo "element 3: ${FRUITS[3]}"
+
+# Print size / length of array
+echo "Length: ${#FRUITS[@]}"
+echo "Whole array: ${FRUITS[@]}"
+echo "Whole array: ${FRUITS[*]}"
+
+echo "Looping over array elements"
+# Iterate over array elements
+for ITEM in ${FRUITS[@]}
+do
+    echo $ITEM
+done
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A script to demostrate usage of sed command
+
+Source Code:
+
+#!/bin/bash
+
+# Basic text substitution using sed
+echo "Bash Scripting Bash Language" | sed 's/Bash/Perl/'
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+	Learn Linux on DevOps Perspective :
+	
+		- DevOps Team Roles & Responsibilities :
+		
+			- Install all the DevOps Tools/Packages and Services on Linux Machines.
+			- Package Management :
+				- Periodic Upgrade of packages 
+					Eg.: jdk11 --> jdk17 - Upgrade - update and clean-up the previous version
+										 - Update  - Just Update to New Version 
+				- Un-install the Packages
+				- Back-up and Restore 
+			
+			- Remote Server Management - i.e., Client Server Architecture
+			
+				Server (VM)				
+					- Client1,2,3,4,5 (VM)
+					
+			- Manage Linux Machines :
+			
+				- Package Management 
+				- File Management 
+				- User Management 
+				- Access Management
+				- Remote Server Management 
+					SSH (Secure SHell) Protocol -	
+						SSH Connection using Port 22.
+						
+							- Host Name 						
+							- User Name 							
+							- Credential
+								Types of Authentication :								
+									- Password based Authentication
+									- Token based Authentication
+									- Key based Authentication
+										- Private key 
+										- Authorized_keys / Public Key 
+									- Passwordless Authentication
