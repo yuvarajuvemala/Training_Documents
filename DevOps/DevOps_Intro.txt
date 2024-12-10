@@ -1,0 +1,204 @@
+######################
+Day 5 : 10th Dec. 2024
+######################	
+
+
+Module 3: DevOps Overview
+
+	1. Evolution of Waterfall, Agile, and DevOps
+	2. What is DevOps
+	3. Why DevOps
+	4. Benefits of DevOps
+	5. DevOps Stages
+	6. DevOps Lifecycle
+	7. Various Automation in DevOps
+	8. Overview of CICD
+	
+	
+	DevOps Modules :
+	
+	What is DevOps ?
+	
+	Software Applications ?
+	
+		- Desktop Applications
+		
+		- Web Applications
+		
+		- Mobile Applications 
+		
+		- Embedded Applications 
+			- Chip Level Programming
+			
+			
+	How the Software Applications are Created delivered to the End-Users ?
+	
+	SDLC - Software Development Life Cycle 
+	
+	Eg.: 
+		Desktop Applications :
+				
+				- Super_Market Billing System  
+				
+					- Functions?
+						- Stock_Management 
+						- User_Interace Design
+						- Billing
+						- Payment:
+							Mode of Payment - CASH/CARD 
+						
+				
+				
+	- Requirement Analysis
+	- Document/Design
+	- Coding 
+	- Testing 
+	- Implemented to Production
+	- Maintenance / Monitor 
+	
+	
+	Waterfall Model :
+	
+		- Linear/Top-Down Approach to Develop the software product 
+		-
+
+	- Requirement Analysis
+	- Document/Design
+	- Coding 
+	- Testing 
+	- Implemented to Production
+	- Maintenance / Monitor 	
+	
+		Desktop Applications :
+				
+				- Super_Market Billing System  	--> 12 Months 
+				
+					- Functions/Modules
+						- Stock_Management 
+						- User_Interace Design
+						- Billing
+						- Payment:
+							Mode of Payment - CASH/CARD/
+								UPI++
+								Mobile App
+								
+	
+	Core Project :
+	- Requirement Analysis
+	- Document/Design
+	- Coding 							7th Month of project 
+	- Testing 
+	- Implemented to Production
+	- Maintenance / Monitor 		
+			
+								UPI++
+								Mobile App
+								
+	Enhancement Project :					
+	- Requirement Analysis
+	- Document/Design
+	- Coding 							
+	- Testing 
+	- Implemented to Production
+	- Maintenance / Monitor 		
+
+
+Domain :
+
+		Telecomm Domain 
+		
+			SP1 --> Want to introduce new offer to their customer  
+			SP2 --> 
+			
+		
+		Retail Domain 
+
+
+	- AGILE Methodologies :
+	
+		SDLC :
+		
+		- Requirement Analysis
+		- Document/Design
+		- Coding 							
+		- Testing 
+		- Implemented to Production
+		- Maintenance / Monitor 	
+		
+			Desktop Applications :
+					
+					- Super_Market Billing System  	--> 12 Months 
+					
+						- Functions/Modules -> Iteration 
+							- Stock_Management 
+							- User_Interace Design
+							- Billing
+							- Payment:
+								Mode of Payment - CASH/CARD/	
+
+		
+		Iteration 1 		# Stock_Management 
+		
+		- Requirement Analysis
+		- Document/Design
+		- Coding 							
+		- Testing 
+		- Implemented to Production with proper approval
+		- Maintenance / Monitor	
+
+		
+		Iteration 2 		# User_Interace Design
+		
+		- Requirement Analysis
+		- Document/Design
+		- Coding 							
+		- Testing 
+		- Implemented to Production with proper approval
+		- Maintenance / Monitor		
+		
+			
+		Iteration nth 		# Mobile App
+		
+		- Requirement Analysis
+		- Document/Design
+		- Coding 							
+		- Testing 
+		- Implemented to Production with proper approval
+		- Maintenance / Monitor	
+
+			Using AGILE Methodologies:
+			
+				we can Achieve :
+				
+			
+					- Continuous Development
+					- Continuous Integration 
+					- Continuous Testing 
+					- Continuous Delivery 
+						- Continuous Delivery approach expect Manual Approvals for Production Release
+					
+				We cannot Achieve :
+				
+					- Continuous Deployment 
+						- Continuous Deployment approach Never expect Manual Approvals for Production Release
+						- This allow the Automated Deployment to Production Environments.
+						
+						
+	- DevOps :
+	
+		DevOps is a Softare Development Strategy, which help to promote the collaboration between the Teams like Development Team and Operations Team to achieve Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployments and Continuous Monitoring in more automated fashion.
+		
+	
+	How to Implement DevOps ?
+	
+	Teams :
+
+		
+		- DevOps Team	
+			- Infra-Structure Management Team 
+			- Application Development Team    
+			- Testing Team 
+			- Release Management Team 
+			- Production Support Team 
+			- Production Monitoring Team 
+			- IT Security Team 
