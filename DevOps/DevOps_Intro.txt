@@ -202,3 +202,296 @@ Domain :
 			- Production Support Team 
 			- Production Monitoring Team 
 			- IT Security Team 
+
+
+
+######################
+Day 6 : 11th Dec. 2024
+######################	
+
+	- DevOps :
+	
+		DevOps is a Softare Development Strategy, which help to promote the collaboration between the Teams like Development Team and Operations Team to achieve Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployments and Continuous Monitoring in more automated fashion.
+		
+	
+	How to Implement DevOps ?
+	
+	Teams :
+
+		
+		- DevOps Team	
+			- Infra-Structure Management Team 
+			- Application Development Team    
+			- Testing Team 
+			- Release Management Team 
+			- Production Support Team 
+			- Production Monitoring Team 
+			- IT Security Team 
+			
+			
+	Environments :
+	
+	
+		Non-Prod Environments									Production Environment (LIVE)
+		
+			Dev Environment	(VM)
+			
+			Build Environment (VM)
+			
+			Testing Environment (VM)
+			
+				- QA (VM)
+				
+				- UAT (VM)				==============>				Production Servers (VM)
+			
+			
+	Application Architecture :
+	
+		- Monolith Application Architecture
+			- It is tightly coupled Architecture
+			- Here all the Functions/Dependencies are created within a same program/level
+			
+		
+		- Micro-Service Based Application Architecture
+			- Loosely-Coupled Application Architecture
+			- Here, each and every function is considered as a micro-service 
+			- Each Service can be independently developed and implemented 
+			
+			
+	DevOps Stages :
+	
+		- Continuous Development :
+		
+			- Continuous Development is a capability of any Development Team to Continously Code the changes and implement.
+			- Improve Developers' Productivity
+			
+			Developer : Coding!
+			
+			In general :
+			
+				- Create Application Source Code 		Java Progamming Language
+				- Build the Source Code 		
+						# Is a process of Compiling the Source Code and Creating Artifacts(Binaries/Executables - *.exec/*.dll/*.jar/*.war) 
+				- Unit Testing 	
+				- Promote the Artifacts to Target Environment(QA)
+				- Notify the Testing Team thru Emails
+				
+				
+			Using DevOps Approach :			
+			
+					- Developers Create Application Source Code.
+					- Save the Source Code in the Source Code Repository(GITHUB) 
+				
+				Using DevOps Strategy :				
+				Automate :
+				
+					- Automate Build the Source Code 		
+							# Is a process of Compiling the Source Code and Creating Artifacts(Binaries/Executables - *.exec/*.dll/*.jar/*.war) 
+					- Automate Unit Testing 	
+					- Automate Promotion of Artifacts to Target Environment(QA)
+					- Automate - Email Notifications	
+
+			Tools :
+			
+				- IDEs - Integrated Development Environment - Eclipse based IDEs like Visual Studio Code/Eclipse/Pycharm/Visual Studio 
+				- GIT / GITHUB
+		
+		- Continuous Integration :
+			
+			- It is the capability of the Development Team to Continously Integrate the Changes to Testing Environments for further Testing without waiting for any dependencies.
+			
+			Tools :
+			
+				- IDEs - Integrated Development Environment - Eclipse based IDEs like Visual Studio Code/Eclipse/Pycharm/Visual Studio 
+				- GIT / GITHUB
+				- Build Tools - Maven/Gradle/Ant  
+				- Unit Test Tools - JUnit/TestNG 
+				- Jenkins/Docker/Kubernetes/Ansible 
+				
+			
+		- Continuous Testing :
+		
+			- It is the capability of the Testing Team to Continously Test the Changes/Services
+			- Test Cases/Test Data 
+			- Main Objective of Continous Testing on DevOps Perspective is - All the issues should be identified  at the very earlier Stage fix it before move to higher enviroment.
+			
+			Sum of two Numbers ?
+		
+			int a; 
+			int b;
+			
+			int c = a + b 
+
+			print c
+			
+			
+			==> 5, 5 		==>	10
+			
+			==> 5.5 , 10.5  ==> ?
+			
+			==> 234234234234234234234 + 2342342342342342342342 ==> ?
+			
+			
+			Tools: 
+				- Junit / TestNG / Selenium
+				- Jenkins
+		
+		
+		- Continuous Delivery/Deployment :
+		
+			- Both Continuous Delivery/Deployment are used to perform Production Release 
+				i.e., From Non-Prod to Prod Environment.			
+		
+			- Continuous Delivery :
+				- Continuous Delivery approach expect Manual Approvals for Production Release
+				- Due to some external dependencies we expect manual approvals for some mission critical applications and some Monolith Applications
+				- This Process might leads to Application Down-Time.
+				
+				Eg.: 
+
+						Banking Services : Online/Credit Card ::
+						
+							Production Release Window :
+								- 2 to 6Hrs		==> Non-Business - Downtime 
+								v1.0	==> Upgrade to v2.0 
+								Try to fix the Issue 
+								else Revert					
+					
+					
+			- Continuous Deployment :
+				- Continuous Deployment approach Never expect Manual Approvals for Production Release.
+				- This allow the Automated Deployment to Production Environments.				
+				- Is Matured level of DevOps.				
+				- Continous Deployment can be achieved only for the Micro-Service Based Application Architecture. 
+			
+				- Achieve Production Deployments Without any Down Time
+				- ZERO Downtime.
+				
+				Eg.: 
+				
+						Facebook/Netflix/Amazon 
+		
+
+				www.amazon.com :
+					
+				signup			-> Micro-Service1	-> Independently Developed/Tested/ Release to Production
+				signin			-> Micro-Service2	-> Independently Developed/Tested/ Release to Production
+				search 
+				add to cart 
+				update address 
+				payment 
+				place the order 
+				track
+			
+			
+			Tools :
+			
+				- Jenkins,Docker,Ansible,Kubernetes
+				
+				
+				
+		- Continuous Monitoring :
+		
+			- To Achieve High Availbitlity of application running in the Production Environment
+		
+			- Is completely owned by the Production Support/Monitoring Team 
+			
+			--> 10000 users are accessing the app.
+			
+			--> 50000 user ??
+			
+			-> Infra-Structure Monitoring 
+			
+				- Monitor the Infra-Structure using Monitoring Tools 
+				
+					CPU/Memory/Network Traffic 					
+						--> 80% 
+				
+				Tools :				
+					Prometheus/Grafana/Splunk/DynaTrace
+					Jenkins 					
+			
+			-> Application Monitoring 
+			
+				- 1 service can give a call to another 
+				- Service call to DataBase 
+				
+				Tool :
+					AppDynamics / DataDog
+					Jenkins
+					
+					
+		- Infra-Structure Management :
+		
+			- Infra-Structure Management Team 
+			
+				- Create Infra-Structure	
+				- Configure Infra-Structure 
+				
+			Tools :
+			
+				Terraform/Cloudformation/ARM		==> Infra-Structure Provisioning/creation
+				Ansible/Chef/Puppet 				==> Infra-Structure Configuration Management
+				Jenkins
+				
+				
+	DevOps LifeCycle :
+	
+		- Developer 
+		|
+		|	- Code - build - create artifact - integrated for further testing - Automate Testing 
+		|																			|
+		|																			|
+		|																		Production Deployment 
+		|																			|
+																					|
+																				Monitoring
+		|																			|
+		|																			|
+		-----------------------------------------------------------------------------																		
+		
+	CI/CD ::
+	
+		- Continous Integration / Continous Delivery/Deployment
+		
+		
+		CI/Cd 
+		
+		CI/CD 
+		
+	
+	DevOps Tools : 
+	
+		- Open-Source DevOps Tools :
+			
+			git/jenkins/docker/ansible/kubernetes/terraform/Prometheus/Grafana
+		
+		- Managed Services : are from the service providers 
+
+			AWS 	-> AWS Code Commit/Build/Deploy
+			Azure 	-> Azure DevOps Services - AzRepo/Pipeline/Artifact/Test/Boards
+			GCP		-> DevOps Services 
+		
+		
+	DevOps Architect/Consultant do Detailed DevOps Assessment!
+	
+		-> Report!
+		
+	DevOps is all about :
+	
+		- People 
+		- Process 
+		- Tools 
+		
+	SDLC ;
+	
+		Waterfall/AGile/DevOps/DevSecOps/GitOps/MLOps/AIOps............................>
+		
+		
+Next :
+
+	GIT/GIHUB 
+		
+	
+		
+			
