@@ -1,0 +1,246 @@
+#######################
+Day 7 : 12th Dec. 2024
+#######################	
+		
+
+Module 5: Managing Source Code – Git and GitHub
+
+	Continous Development ::
+	
+	Using DevOps Approach :			
+	
+			- Developers Create Application Source Code.
+			- Save the Source Code in the Source Code Repository(GITHUB)
+			
+	Developer :
+
+		Develop a Web Page :
+		
+	index.html 
+	
+	<html>
+	---
+	---
+	---
+	--
+	-
+	---
+	--
+	</html>
+	
+	Project Folder/Workspace Directory
+	
+	java_web_app_proj1 Folder 
+		src 
+			main
+				*.java 
+				*.java 
+			test 
+				*.java 
+				*.java
+		target
+			*.war 
+		app.properties
+		resources
+			index.html 
+			*.css 
+			*.js
+	
+	create index.html 
+	
+	<html>
+	---
+	---
+	---
+	--
+	-
+	---
+	--
+	</html>
+	
+		save as index.html & test the changes 
+	
+	Edit index.html 
+	
+	<html>
+	---
+	---
+	---
+	--
+	-------
+	----------
+	--
+	-----
+	---
+	</html>
+	
+		save as index.html & test the changes
+		
+	Edit index.html 
+	
+	<html>
+	---
+	-------
+	---
+	--asdfasdf
+	-----------asdfasdfasdf
+	----------asdfasdfasdf
+	--asdfasdfsdf
+	---------
+	-------
+	</html>
+	
+		save as index.html & test the changes
+		
+		
+	Using Version Control System :
+	
+		Version Control System 
+			- Is used to Version Control the Source Code Changes
+			- Is used to Track the Source Code Changes 
+	
+	create index.html 
+	
+	<html>
+	---
+	---
+	---
+	--
+	-
+	---
+	--
+	</html>
+	
+		save as index.html			---> 	index.html_v1.0		# v1.0 considered as a Tag/Version_number/Commit_ID
+		Unit Test the Changes 
+
+	Edit index.html 
+	
+	<html>
+	---
+	---
+	---
+	--
+	-------
+	----------
+	--
+	-----
+	---
+	</html>
+	
+		save as index.html			---> 	index.html_v1.1		# v1.1 considered as a Tag/Version_number/Commit_ID
+		Unit Test the Changes 
+
+		save as index.html			---> 	index.html_v1.2	
+		save as index.html			---> 	index.html_v1.3	
+		save as index.html			---> 	index.html_v1.4	
+		save as index.html			---> 	index.html_v1.5	
+		save as index.html			---> 	index.html_v1.6	
+		
+		
+	Working with Version Control System :
+	
+	Type of VCS :
+	
+		1. Local VCS 
+		2. Centralized VCS 
+		3. Distributed VCS 
+		
+	GIT :
+	
+		- Is an Open-Source Distributed Version Control System
+		- It is used to Version Control the Source Code Changes
+		- Used to Track the Changes 
+		- Used to Perform Parallel Development using Branching Techniques
+		
+	Remote GIT Repository Servers :
+	
+		Github 
+		gitlab
+		bamboo
+		Azure Repo 
+		AWS Code Commit 
+		Bitbucket 
+		
+	Working with GIT :
+	
+		- Git Client  	- To be Installed in the local Machine 
+		
+		- GitHub		- Should have access to Remote github server
+		
+		- Git File Workflow :
+		
+		- Git Branching Strategies :
+		
+		- Handling Remote Git Repository(Github) :
+	
+	
+	- Git File Workflow :
+	
+	In Distributed VCS :
+	
+	Local Machine																					Remote Server
+	
+	Working Directory 				Staging Area				Local Repository					   Remote Repository
+	
+		index.html	 --------------> index.html	 --------------> Index.html_v1.0	-----------------> 	Index.html_v1.0
+						git add 				   git commit 						  	 git push
+			
+		index.html	 --------------> index.html	 --------------> Index.html_v1.1	----------------->	Index.html_v1.1
+						git add 				   git commit                         	 git push                      
+	                                                                                                    
+		index.html	 --------------> index.html	 --------------> Index.html_v1.2	----------------->  Index.html_v1.2
+						git add 				   git commit                         	 git push                      
+                                                                                                        
+		index.html	 --------------> index.html	 --------------> Index.html_v1.3	----------------->  Index.html_v1.3
+						git add 				   git commit 						  	 git push
+						
+						
+	In Local Machine :
+	
+		Working Directory 		# Is Physical Memory Location of the File c:/folder/index.html
+		
+		Staging Area			# Logical Location - used by git to stage the changes 
+								# Stagins Area acts as an interface between Working Directory & Local Repository
+						
+		Local Repository		# Logical Location - used by git to create permanent commit point 
+								# Stagins Area acts as an interface between Working Directory & Local Repository
+
+	
+	Developers' Workload :
+	
+		- Enhancement Project / Bug fix 	# Project Source is already present in Remote Repository
+		
+		- New Project 						# Create from the Local Machine & Push it to Remote Repository
+		
+		
+	Git CLI Commands :
+	
+		
+		- git clone 				# Used to clone/copy the entire Remote Repository to Local Machine(Working Dir & Local Repo)
+
+		- git add					# Used to add the changes from Working Directory to the Staging Area
+
+		- git commit 				# Used to Permanently commit the Changes from Staging to Local Repository
+		
+		- git push					# Used to Push the changes from Local Repository to Remote Repository
+		
+		- git pull / git fetch		# Both git pull and git fetch are used to handle the incremental changes from Remote Repository 
+		
+			- git fetch 
+			
+				# git fetch will just check for the incremental changes in the remote repository. If their is any incremental changes exist, it will update the details only in the local repository. git fetch will NEVER Update the Working Directory.
+				
+				# Upon git fetch, to work on the changes, we can use git pull or git merge
+				
+				# Using git merge the changes can be updated in the working directory
+				
+			- git pull  			
+			
+				# git pull will check for the incremental changes in the remote repository. If their is any incremental changes exist, it will update the details in the local repository as well in the Working Directory.	
+
+				git pull = git fetch + git merge 
+				
+	
+	
+	
