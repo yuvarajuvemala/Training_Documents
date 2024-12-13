@@ -272,3 +272,394 @@ Next :
 
 	Working with GIT Local Repositories using git cli commands. 	
 	
+
+
+#######################
+Day 8 : 13th Dec. 2024
+#######################	
+		
+	Working with GIT Local Repositories using git cli commands ::::::
+	
+		- Git File Workflow :
+		
+		In Distributed VCS :
+		
+		Local Machine																					Remote Server
+		
+		Working Directory 				Staging Area				Local Repository					   Remote Repository
+		
+			index.html	 --------------> index.html	 --------------> Index.html_v1.0	-----------------> 	Index.html_v1.0
+							git add 				   git commit 						  	 git push
+		
+		
+		
+	Local Machine :
+
+		- Install Git Client
+		
+		- Work with GIT CLI Commands 
+		
+		for Windows Users :
+			- GIT BASH 			* Working with git bash 
+			
+		for Linux / Mac Users :
+			- Open Linux/Mac Terminal and execute Git Cli Commands
+
+	
+	Open git bash/Terminal 
+	
+		Create the Directory 
+		
+			d:/SA-Dec03-DevOps
+			
+			cd d:
+			
+			mkdir SA-Dec03-DevOps
+			
+			cd SA-Dec03-DevOps
+			
+			mkdir repo1
+			
+			mkdir repo2 
+			
+			cd repo1	
+			
+			# execute git cli commands 
+		
+		
+		Create New Project 		# Create from the Local Machine & Push it to Remote Repository
+		
+		
+		git init 				# Is used to initialize the local git repository
+								# Create a .GIT! Directory 
+								# Create a default branch called master/main 
+		
+				
+		git config :			# To assign the defauld Author Name and Email ID 
+								# git config should be executed to set the user name and Email ID before the very initial commit.
+								
+			GIT Local Configuration :	
+				# It is applicable to a specific repository
+				
+				git config user.name "Loksai"				
+				git config user.email "loksai@asdfa.com"
+			
+			
+			GIT Global Configuration :
+				# It is applicable to all the repositories 
+				
+				git config --global user.name "Loksai"				
+				git config --global user.email "loksai@asdfa.com"
+				
+				
+		git status 				# Used to get the status of git repository
+
+
+		echo "rec1" >> file1.txt
+		
+		git add file1.txt 
+		
+		git commit -m "Created file1.txt"
+		
+		git log 
+		
+		
+		git add :::::		
+		
+			git add <file_name>
+			
+			git add *.txt 
+			
+			git add fi1e1.txt file2.txt file3.txt 
+			
+			git add .
+		
+		
+		ls 						# Linux Bash Command to get the list of files and folder from Working Directory
+		
+		git ls-files			# Is git command to get the list of files and folders that being tracked by git.
+		
+		
+		Unstaging 				# Remove the Changes from Staging Area.
+			
+			git rm --cached <file_name>	
+								# Used to Remove the Changes from Staging Area.
+								# But, the Changes will be take back to working Directory.
+								# The Changes that are remove, will be considered as Untracked Changes.
+								
+			git rm -rf <file_name> 
+								# Used to Permanently pemove the Changes from Staging Area as well as from the working directory.
+		
+		
+		
+		git log ::::
+		
+		
+			git log 
+			
+			git log --oneline	
+			
+			git log -2
+			
+			git log --oneline -3
+			
+			git log --stat 
+			
+			git log --stat -1
+			
+		git show <commit_id>
+		
+		
+		git commit :::::
+		
+		
+			# Used to Create a permanent commit point 
+			
+			git commit -m "<Commit Message>"
+			
+			<Commit Message> ???
+			
+			Eg.: 
+			
+				git commit -m "CR2412 - Upated payment function"
+			
+			
+			git commit --amend -m "Valid Message"			
+					# Used to Update the Commit Message of latest commit,  Without creating New Commit Point.
+					
+					
+		
+		git diff 		# Used to compare the changes between the working directory and Local Repository
+						# To Compare the Changes between Commited and Uncommited Changes.
+
+
+  501  cd d:
+  502  cd c:
+  503  cd d:
+  504  pwd
+  505  mkdir SA-Dec03-DevOps
+  506  cd SA-Dec03-DevOps/
+  507  pwd
+  508  ls
+  509  clear
+  510  ls
+  511  mkdir repo1
+  512  ls
+  513  cd repo1/
+  514  clear
+  515  pwd
+  516  ls
+  517  ls -a
+  518  git init
+  519  ls -a
+  520  cd .git/
+  521  pwd
+  522  ls
+  523  cd ..
+  524  clear
+  525  git status
+  526  echo "record1" >> file1.txt
+  527  ls
+  528  git status
+  529  git add file1.txt
+  530  git status
+  531  ls
+  532  git commit -m "Created file1.txt"
+  533  git status
+  534  git log
+  535  clear
+  536  ls
+  537  git status
+  538  clear
+  539  echo "rec1" >> file2.txt
+  540  ls
+  541  git status
+  542  git add file2.txt
+  543  git status
+  544  git commit -m "Created file2.txt"
+  545  git status
+  546  git log
+  547  cat file1.txt
+  548  clear
+  549  ls
+  550  git status
+  551  git log
+  552  cd ..
+  553  ls
+  554  mkdir repo2
+  555  cd repo2/
+  556  git init
+  557  ls
+  558  git log
+  559  git status
+  560  echo "rec1" >> a1.txt
+  561  git status
+  562  git add a1.txt
+  563  git commit -m "Created a1.txt"
+  564  ls
+  565  git status
+  566  git log
+  567  git config user.name "Loksai"
+  568  echo "rec1" >> a1.txt
+  569  git add a1.txt
+  570  git commit -m "updatred a1.txt"
+  571  git log
+  572  cd ..
+  573  cd repo1
+  574  ls
+  575  git log
+  576  echo "rec1" >> q1.txt
+  577  git add q1.txt
+  578  git commit -m "Created q1.txt"
+  579  git log
+  580  clear
+  581  cd ..
+  582  ls
+  583  cd repo1/
+  584  cd .git/
+  585  ls
+  586  cd ..
+  587  clear
+  588  ls
+  589  cd ..
+  590  clear
+  591  mkdir repo3
+  592  cd repo3/
+  593  clear
+  594  ls -a
+  595  git init
+  596  ls -a
+  597  clear
+  598  git status
+  599  ls
+  600  echo "rec1" >> f1.txt
+  601  git status
+  602  git add f1.txt
+  603  git status
+  604  git commit -m "Created f1.txt"
+  605  git log
+  606  git status
+  607  clear
+  608  clear
+  609  ls
+  610  git status
+  611  git log
+  612  echo "rec1" >> s1.txt
+  613  ls
+  614  git status
+  615  echo "rec1" >> s2.txt
+  616  echo "rec1" >> s3.txt
+  617  echo "rec1" >> s4.txt
+  618  echo "rec1" >> l1.java
+  619  echo "rec1" >> l2.java
+  620  echo "rec1" >> l3.java
+  621  echo "rec1" >> e1.temp
+  622  echo "rec1" >> e2.temp
+  623  echo "rec1" >> s1.txt
+  624  echo "rec1" >> s2.txt
+  625  echo "rec1" >> s3.txt
+  626  echo "rec1" >> j1.doc
+  627  echo "rec1" >> j2.doc
+  628  clear
+  629  ls
+  630  git status
+  631  git add e1.temp j1.doc
+  632  git status
+  633  git add *.java
+  634  git status
+  635  git add *.temp *.doc
+  636  git status
+  637  git add .
+  638  git status
+  639  git status
+  640  ls
+  641  git ls-files
+  642  git rm --cached e1.temp
+  643  git status
+  644  git ls-files
+  645  git rm -rf s4.txt
+  646  ls
+  647  git ls-files
+  648  git status
+  649  git commit -m "Created some dummy files"
+  650  git status
+  651  clear
+  652  git log
+  653  clear
+  654  git log
+  655  cd ..
+  656  cd repo2/
+  657  ls
+  658  git log
+  659  cd ..
+  660  cd repo1/
+  661  clear
+  662  git log
+  663  clear
+  664  git log
+  665  echo "rec1" >> q1.txt
+  666  git add .
+  667  git commit -m "updated q1.txt"
+  668  echo "rec1" >> q1.txt
+  669  git add .
+  670  git commit -m "updated q1.txt"
+  671  echo "rec1" >> q1.txt
+  672  git add .
+  673  git commit -m "updated q1.txt"
+  674  echo "rec1" >> q1.txt
+  675  git add .
+  676  git commit -m "updated q1.txt"
+  677  clear
+  678  git log
+  679  clear
+  680  git log
+  681  clear
+  682  git log
+  683  clear
+  684  git log --oneline
+  685  git log -1
+  686  git log -2
+  687  git log --oneline
+  688  git log --oneline -3
+  689  clear
+  690  git log -1
+  691  git log --stat -1
+  692  git log -1
+  693  clear
+  694  git log --oneline -3
+  695  git show 93dc0a9
+  696  git log --stat -1
+  697  clear
+  698  git log --oneline
+  699  git show 899f136
+  700  cat file1.txt
+  701  clear
+  702  git log --oneline
+  703  echo "rec1" >> l1.txt
+  704  git add .
+  705  git commit -m "CR2412 - Upated payment function"
+  706  clear
+  707  git log --oneline
+  708  echo "rec1" >> d1.txt
+  709  git add .
+  710  git commit -m "asdfasdfasdfasdfasdf"
+  711  clear
+  712  git log --oneline
+  713  git commit -m "Valid Message"
+  714  git log --oneline
+  715  git commit --amend -m "Valid Message"
+  716  git log --oneline
+  717  clear
+  718  ls
+  719  cat q1.txt
+  720  git status
+  721  vi q1.txt
+  722  cat q1.txt
+  723  git status
+  724  git diff
+  725  git add .
+  726  git commit -m "updated q1.txt"
+  727  git diff
+  728  cd ..
+  729  clear
+  730  history
