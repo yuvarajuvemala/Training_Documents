@@ -1582,3 +1582,111 @@ Next :::
 	git remote command options 
 	
 	Work with Github Repositories using Visual Studio Code 
+
+
+
+
+#######################
+Day 11 : 19th Dec. 2024
+#######################	
+
+		git Pull / Fetch 
+		
+		
+		New Repo from Local Machine to Remote Server :::
+		
+		- Create Local Repository 
+		
+		- Create an empty remote repo and link to local repo.
+		
+		- push the changes to remote repository
+		
+		
+
+		git remote -v			# Is used to get the list of remote repositories linked with the local repository
+		
+		git remote add 			# To Link a remote repository to local repository
+		
+				git remote add origin https://github.com/SA-Team-DevOps-03-Dec-24/TestRepo2.git
+		
+		git remote remove 		# To remove a remote repository link from local repository
+		
+				git remote remove origin
+
+
+		git branch -M main		# Rename Branch 
+		
+		git branch -D feature1	# Delete the Branch 
+	
+
+- Work with Github Repositories using Visual Studio Code 
+
+
+	 - Install Visual Studio Code
+	 
+			https://code.visualstudio.com/download
+			
+
+
+	git cherry-pick <commit_id> 
+	
+		- It is used to merge specific commit to the target branch.
+		- git cherry-pick is not recommended to use without proper branching strategy
+		
+  689  cd SA-Dec03-DevOps/
+  690  ls
+  691  clear
+  692  ls
+  693  cd  remoterepos/
+  694  ls
+  695  cd TestRepo1/
+  696  clear
+  697  git log --oneline
+  698  ls
+  699  git branch
+  700  ls
+  701  ls
+  702  git log --oneline
+  703  git status
+  704  git fetch
+  705  git status
+  706  ls
+  707  git pull
+  708  ls
+  709  git status
+  710  git status
+  711  git pull
+  712  git status
+  713  ls
+  714  clear
+  715  cd ..
+  716  ls
+  717  mkdir TestRepo2
+  718  cd TestRepo2/
+  719  git init
+  720  echo "rec1" >> f1.txt
+  721  git add .
+  722  git commit -m "cm1"
+  723  clear
+  724  git remote -v
+  725  ls
+  726  git branch -M main
+  727  git branch -M master
+  728  git remote -v
+  729  git remote add origin https://github.com/SA-Team-DevOps-03-Dec-24/TestRepo2.git
+  730  git remote -v
+  731  git push -u origin master
+  732  git remote remove origin
+  733  git remote -v
+  734  git remote add origin https://github.com/SA-Team-DevOps-03-Dec-24/TestRepo2.git
+  735  git remote -v
+  736  cd ..
+  737  ls
+  738  cd TestRepo1
+  739  git branch
+  740  cd ..
+  741  clear
+  742  clear
+  743  history
+		
+
