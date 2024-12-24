@@ -1,0 +1,201 @@
+	
+#######################
+Day 12 : 20th Dec. 2024
+#######################	
+
+	Build Orchestration Tool - Jenkins.
+	
+	Jenkins - Is an Open-Source Build Orchestration Tool.
+	Used Automate Application Builds and Deployments.
+	
+	Other Products :
+	
+		gitlab-ci
+		bamboo
+		Azure Pipelines
+		AWS Code Pipeline 
+		
+	Jenkins Architecture :
+	
+		- Jenkins is based on Master-Slave Architecture ::
+		
+			Jenkins_Master Node(VM)		- Install jdk,jenkins,git.
+										- Used to Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
+									
+				Jenkins_Slave Node(VM)	- To Execute the Application Build.
+										- Perform Application Build - Compile, Unit Test, Create Artifacts 
+									
+
+				- Build the Source Code 		
+						# Is a process of Compiling the Source Code and Creating Artifacts(Binaries/Executables - *.exec/*.dll/*.jar/*.war)
+						
+		Scenario 1 :
+			
+			Jenkins_Master Node(VM)		- Install jdk,jenkins,git. Install Build Tools like maven
+			
+		Scenario 2 :
+		
+            Jenkins_Master Node(VM)		- Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
+			
+				Jenkins_Slave_Node1(VM)	- Java Application Build maven
+				Jenkins_Slave_Node2(VM)	- Python Application Build
+				Jenkins_Slave_Node3(VM)	- .Net Application Build
+				Jenkins_Slave_Node4(VM)	- Ruby Application Build
+				Jenkins_Slave_Node5(VM)	- Angular/NodeJS Application Build
+				
+				
+		CI/CD Workflow :::
+		
+			SCM_Checkout 
+			Application Build 
+			Unit Testing 
+			Create Artifacts 
+			Promote the Application to Test Environments
+			Notify 
+			Deploy to Prod 
+			
+	
+	- Working with Jenkins ::
+	
+		- Developers' Perspective :
+			- Developers are just the consumers of Jenkins Projects 
+			- Developers can Execute/Cancel/Read the Jenkins Job Output
+		
+		
+		- DevOps Perspective :
+			- DevOps Team are the Administrator of Jenkins.
+			
+			Roles & Responsibilies of DevOps Team :			
+			
+			Jenkins Administration 
+				- Installation of Jenkins
+				- Plugins Management 
+				- Global System Configurations 
+				- Tools Management 
+				- User Management 
+				- Security Management				
+				- Credential Management 
+				- Master/Slave Node Configurations
+				- Creation CICD Pipeline Projects 
+				- Onboard Applications to use Jenkins CICD Projects  
+				- Periodic Upgrade of Jenkins and its plugins 
+				- Periodic Backup 
+				- Troubleshooting the Issues!
+				
+	- Installation of Jenkins :::
+	
+		--> Jenkins can be installed in Linux - Ubuntu Machine AMI - v22.04
+				https://www.jenkins.io/doc/book/installing/
+				
+				https://www.jenkins.io/doc/book/installing/linux/
+				
+			Jenkins run as a service, it runs in default port 8080 
+			
+#######################
+Day 13 : 24th Dec. 2024
+#######################	
+
+	Jenkins Administration 
+		- Installation of Jenkins
+		- Plugins Management 		
+		- Global System Configurations 
+		- Tools Management 
+		- User Management 
+		- Security Management				
+		- Credential Management 
+
+
+
+	- Create Jenkins Projects :
+
+		- Free Style Projects :
+			# Based on manual configurations
+		
+		
+			
+	Handling Variables in Jenkins :
+	
+		- Environment Variables :
+		
+			"${JOB_NAME}"
+		
+		
+		- User-Defined Variables :
+		
+		
+
+		- Pipeline Projects		
+			# Based on groovy scripts 
+			# To onboard the Application to CICD Process.
+			# Used to Automate the Builds and Deployments and any process automation.
+	
+			# Pipeline composed of various stages
+			# Stages are used to execute some task.
+			
+			Jenkins_Master Node(VM)		- Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
+			
+		CI/CD Workflow :::
+		
+			SCM_Checkout 
+			Application Build 
+			Unit Testing 
+			Create Artifacts 
+			Promote the Application to Test Environments
+			Notify 
+			Deploy to Prod 
+			
+			
+			
+		Types of Pipeline Projects :
+		
+			- Scripted Pipeline 
+			
+				
+			
+			- Declarative Pipeline 
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello1') {
+            steps {
+               sh 'echo "Hello1" >> file1.txt'
+            }
+        }
+        stage('Hello2') {
+            steps {
+                sh 'echo "Hello2" >> file2.txt'
+            }
+        }
+    }
+}
+
+
+pipeline {
+    agent any
+
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+               echo "Perform SCM Checkout"
+            }
+        }
+        stage('Application Build') {
+            steps {
+                echo "Perform Application Build"
+            }
+        }
+        stage('Deploy to Test Server') {
+            steps {
+                echo "Perform Application Deployment"
+            }
+        }
+    }
+}
+
+Next :
+
+	Setup Jenkins Master-Slave Node
+	
+	Create Application Build and Deployments using CICD Pipeline Project
