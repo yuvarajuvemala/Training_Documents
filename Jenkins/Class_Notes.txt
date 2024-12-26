@@ -199,3 +199,112 @@ Next :
 	Setup Jenkins Master-Slave Node
 	
 	Create Application Build and Deployments using CICD Pipeline Project
+
+
+
+########################
+Day 14 : 26th Dec. 2024
+########################	
+
+	Setup Jenkins Master-Slave Node
+	
+	Create Application Build and Deployments using CICD Pipeline Project	
+
+
+	- Jenkins is based on Master-Slave Architecture ::
+	
+		Jenkins_Master Node(VM)		- Install jdk,jenkins,git.
+									- Used to Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
+								
+			Jenkins_Slave Node(VM)	- To Execute the Application Build.
+						Agent		- Perform Application Build - Compile, Unit Test, Create Artifacts 
+	
+	
+	Jenkins_Master Node(VM)			--> git, jdk, jenkins 
+	
+		Jenkins_Slave_Node1(VM)		--> jdk,maven,git
+		
+		SSH Connection between Jenkins_Master & Slave Nodes
+
+			-> Host Name 
+			-> User Name 
+			-> Key Pair
+				- Public key and private key
+	
+pipeline {
+    agent { label 'slave1' }
+
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+               echo "Perform SCM Checkout"
+			   git 'https://github.com/SA-Team-DevOps-03-Dec-24/java-mvn-springbootapp.git'			   
+            }
+        }
+        stage('Application Build') {
+            steps {
+                echo "Perform Application Build"
+				sh 'mvn clean package'
+            }
+        }
+        stage('Deploy to Test Server') {
+            steps {
+                echo "Perform Application Deployment"
+            }
+        }
+    }
+}	
+
+		Environments :
+	
+		Non-Prod Environments														Production Environment (LIVE)
+		
+			Dev Environment	(VM)
+				- Unit Test
+			
+			Build Environment (VM)
+				- Unit Test
+				
+			Testing Environment (VM)
+			
+				- QA (VM) - Quality Assurance Testing 
+				
+				- UAT (VM) - User Acceptace Testing				==============>				Production Servers (VM)
+
+
+
+	Create Target Environment :
+	
+		Tomcat Web Application Server 
+		
+		Launch a VM 		-- Install Tomcat
+		
+		
+		Jenkins_Master Node(VM)		- Install jdk,jenkins,git.
+									- Used to Create the CI/CD Pipeline Projects and schedule to run in slave nodes.
+								
+			Jenkins_Slave Node(VM)	- To Execute the Application Build.
+						(Agent)		- Perform Application Build - Compile, Unit Test, Create Artifacts 
+						
+						
+		Tomcat_Server (VM)			- To Execute and Test the Application Artifacts (*.war)
+									- Install jdk, Tomcat.
+									- Tomcat WAS runs in port 8080
+		
+			-> Host Name 
+			-> User Name 
+			-> Key Pair
+				- Public key and private key	
+	
+	
+		Publish Over SSH Plugin is used to copt the artifacts from Jenkins Slave Node to Tomcat Server
+		
+		Install Publish Over SSH Plugin in Jenkins Master.
+		
+Next ::
+
+	--> Working with Tomcat & Deployment - CICD Pipeline 
+	
+	--> Build Triggers - Automation 
+	
+	--> Email Notifications 
